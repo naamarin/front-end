@@ -1,19 +1,48 @@
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 10px;
-    width: 90%;
-    max-width: 600px;
-}
-
-.tab {
+.note {
+    width: 200px; /* Keep the width fixed */
+    height: 200px; /* Keep the height fixed */
+    padding: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #4caf50;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s; /* Optional: Add a hover effect */
+    margin-bottom: 70px;
+}
+
+.note:hover {
+    transform: scale(1.05); /* Optional: Scale effect on hover */
+}
+
+.centerText {
+    margin: 0;
+    text-align: center;
+    font-size: 1.2em;
     color: white;
-    font-size: 1.5em;
-    font-weight: bold;
-    aspect-ratio: 1;
-    border-radius: 8px;
+}
+
+.colorsContainer {
+    position: absolute; /* Keep this if needed for positioning */
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.closeButton {
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    background: transparent; 
+    border: none; 
+    color: white; 
+    font-size: 1.2em; 
+    cursor: pointer; 
+    z-index: 1; 
+}
+
+.closeButton:hover {
+    color: red; 
 }
