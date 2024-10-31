@@ -16,7 +16,7 @@ body {
 .grid-container {
   display: grid; 
   grid-template-rows: repeat(auto-fill, minmax(200px, 1fr)); 
-  /* width: 100%; */
+  /* width: 700px; */
   gap: 10px; 
   padding: 10px;
   background-color: blue;

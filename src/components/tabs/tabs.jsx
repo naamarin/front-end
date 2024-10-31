@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import Styles from './tabs.module.css';
-import { getTabs, deleteTab } from '../../services/fetchDataBase'; // Import deleteTab function
+import { getTabs, deleteTab, updateTabText } from '../../services/fetchDataBase'; 
 import Colors from '../Colors/colors';
 
-function Tab() {
+function Tab({refresh}) {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -13,7 +13,7 @@ function Tab() {
         }
 
         fetchData();
-    }, []);
+    }, [refresh]);
 
     const handleColorChange = async () => {
         const updatedData = await getTabs(); // Re-fetch the updated data
