@@ -1,6 +1,16 @@
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    background-color: blue;
+}
+
 .note {
-    width: 200px; /* Keep the width fixed */
-    height: 200px; /* Keep the height fixed */
+    width: 200px;
+    /* Keep the width fixed */
+    height: 200px;
+    /* Keep the height fixed */
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -8,12 +18,14 @@
     justify-content: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s; /* Optional: Add a hover effect */
+    transition: transform 0.2s;
+    /* Optional: Add a hover effect */
     margin-bottom: 70px;
 }
 
 .note:hover {
-    transform: scale(1.05); /* Optional: Scale effect on hover */
+    transform: scale(1.05);
+    /* Optional: Scale effect on hover */
 }
 
 .centerText {
@@ -24,7 +36,8 @@
 }
 
 .colorsContainer {
-    position: absolute; /* Keep this if needed for positioning */
+    position: absolute;
+    /* Keep this if needed for positioning */
     bottom: 10px;
     width: 100%;
     display: flex;
@@ -32,18 +45,17 @@
 }
 
 .closeButton {
-    position: absolute; 
-    top: 10px; 
-    right: 10px; 
-    background: transparent; 
-    border: none; 
-    color: white; 
-    font-size: 1.2em; 
-    cursor: pointer; 
-    z-index: 1; 
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .closeButton:hover {
-    color: red; 
+    color: red;
 }
-

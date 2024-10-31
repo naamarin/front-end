@@ -38,9 +38,7 @@ function App() {
             <header>
                 <button className='add-tab' onClick={handlePostTab}>+ Add new tab</button>
             </header>
-            <div className="grid-container">
-                <Tab refresh={refresh} /> {/* Pass the refresh state to Tab */}
-            </div>
+                <Tab refresh={refresh} /> 
         </>
     );
 }

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import Styles from './tabs.module.css';
-import { getTabs, deleteTab, updateTabText } from '../../services/fetchDataBase'; 
+import { getTabs, deleteTab, updateTabText } from '../../services/fetchDataBase';
 import Colors from '../Colors/colors';
 
-function Tab({refresh}) {
+function Tab({ refresh }) {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -26,30 +26,32 @@ function Tab({refresh}) {
     };
 
     return (
-        <div id="grid-container" className={Styles.tab}>
-            {data && data.length > 0 ? (
-                data.map((tab, index) => (
-                    <div
-                        id="inner-tab"
-                        key={index}
-                        className={Styles.note}
-                        style={{ backgroundColor: tab.color }}
-                    >
-                        <button
-                            className={Styles.closeButton}
-                            onClick={() => handleDeleteTab(tab.id)} // Call handleDeleteTab on button click
+        <div className="grid-container">
+            <div className={Styles.tab}>
+                {data && data.length > 0 ? (
+                    data.map((tab, index) => (
+                        <div
+                            id="inner-tab"
+                            key={index}
+                            className={Styles.note}
+                            style={{ backgroundColor: tab.color }}
                         >
-                            X
-                        </button>
-                        <h2 className={Styles.centerText}>{tab.text}</h2>
-                        <div className={Styles.colorsContainer}>
-                            <Colors id={tab.id} onColorChange={handleColorChange} />
+                            <button
+                                className={Styles.closeButton}
+                                onClick={() => handleDeleteTab(tab.id)} // Call handleDeleteTab on button click
+                            >
+                                X
+                            </button>
+                            <h2 className={Styles.centerText}>{tab.text}</h2>
+                            <div className={Styles.colorsContainer}>
+                                <Colors id={tab.id} onColorChange={handleColorChange} />
+                            </div>
                         </div>
-                    </div>
-                ))
-            ) : (
-                <p>Loading...</p>
-            )}
+                    ))
+                ) : (
+                    <p>Loading...</p>
+                )}
+            </div>
         </div>
     );
 }
