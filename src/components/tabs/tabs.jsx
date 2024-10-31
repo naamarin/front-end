@@ -26,7 +26,7 @@ function Tab({ refresh }) {
     };
 
     return (
-        <div className="grid-container">
+        <div className={Styles.gridContainer}>
             <div className={Styles.tab}>
                 {data && data.length > 0 ? (
                     data.map((tab, index) => (
