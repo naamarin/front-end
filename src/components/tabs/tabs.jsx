@@ -27,7 +27,7 @@ function Tab({ refresh }) {
 
     return (
         <div className={Styles.gridContainer}>
-            <div className={Styles.tab}>
+            {/* <div className={Styles.tab}> */}
                 {data && data.length > 0 ? (
                     data.map((tab, index) => (
                         <div
@@ -51,7 +51,7 @@ function Tab({ refresh }) {
                 ) : (
                     <p>Loading...</p>
                 )}
-            </div>
+            {/* </div> */}
         </div>
     );
 }
